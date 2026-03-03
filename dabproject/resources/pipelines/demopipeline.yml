@@ -1,0 +1,14 @@
+resources:
+  pipelines:
+    pipeline_demo_pipeline:
+      name: Demo pipeline
+      libraries:
+        - glob:
+            include: ../../src/Pipelines/Demo
+              pipeline/transformations/**
+      schema: bronze
+      photon: true
+      catalog: ${var.catalog_name}
+      serverless: true
+      root_path: ../../src/Pipelines/Demo
+        pipeline
